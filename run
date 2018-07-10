@@ -1,0 +1,30 @@
+#!/bin/sh
+
+#  run
+#
+#  Copyright (c) 2018 Satish Babariya. All rights reserved.
+
+#  Figure out where we're being called from
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+
+# Get path to Localizations Generator script
+LocalizationsGenerator_PATH="$DIR/LocalizationsGenerator.swift"
+
+BASE_PATH="$PROJECT_DIR/$PROJECT_NAME"
+
+if [ -e $LocalizationsGenerator_PATH ]; then
+  chmod 755 $LocalizationsGenerator_PATH
+fi
+
+if [ -z $1 ]; then
+     echo "Localizable.strings File Not Found"
+    exit 1
+fi
+
+if [ -z $2 ]; then
+    echo "Localizations.swift File Not Found"
+    exit 2
+fi
+
+"$LocalizationsGenerator_PATH" -i "$1" -o "$2"
