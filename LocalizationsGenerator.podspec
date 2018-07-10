@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'LocalizationsGenerator'
-    s.version          = '1.0.3'
+    s.version          = '1.0.4'
     s.summary          = 'Auto Localizations Generator , intended to end the constant problems that localizations present developers.'
     s.homepage         = 'https://github.com/satishbabariya/LocalizationsGenerator'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
