@@ -13,4 +13,9 @@ Pod::Spec.new do |s|
     s.cocoapods_version = '>= 1.4.0'
     s.swift_version = '4.0'   
     s.frameworks = 'Foundation'
+    s.script_phase = {
+        :name => "LocalizationsGenerator",
+        :script => 'chmod +x "${PODS_ROOT}/LocalizationsGenerator/run"',
+        :execution_position => :before_compile
+    }
 end
