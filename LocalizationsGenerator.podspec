@@ -18,4 +18,15 @@ Pod::Spec.new do |s|
         :script => 'chmod +x "${PODS_ROOT}/LocalizationsGenerator/run"',
         :execution_position => :before_compile
     }
+    
+    
+    s.subspec "Auto" do |ss|
+        ss.script_phase = {
+            :name => "AutoLocalizationsGenerator",
+            :script => 'chmod +x "${PODS_ROOT}/LocalizationsGenerator/autorun";"${PODS_ROOT}/LocalizationsGenerator/autorun"',
+            :execution_position => :before_compile
+        }
+    end
+ end
+    
 end
