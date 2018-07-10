@@ -8,8 +8,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/satishbabariya/LocalizationsGenerator.git', :tag => s.version.to_s }
     s.ios.deployment_target = '8.0'
     s.source_files = 'LocalizationsGenerator/Localizations.swift'
-    s.preserve_paths = 'LocalizationsGenerator/LocalizationsGenerator.swift'
-    s.preserve_paths = 'LocalizationsGenerator/run'
+    s.preserve_paths = 'LocalizationsGenerator/*'
     s.static_framework = true
     s.cocoapods_version = '>= 1.4.0'
     s.swift_version = '4.0'   
